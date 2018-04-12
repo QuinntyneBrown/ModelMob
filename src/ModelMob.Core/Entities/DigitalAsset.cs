@@ -2,7 +2,7 @@ using System;
 
 namespace ModelMob.Core.Entities
 {
-    public class DigitalAsset
+    public class DigitalAsset: BaseEntity
     {
         public Guid DigitalAssetId { get; set; }
         public string Name { get; set; }
