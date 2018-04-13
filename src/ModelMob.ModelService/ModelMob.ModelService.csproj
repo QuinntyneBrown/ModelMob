@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\FeaturedModels\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

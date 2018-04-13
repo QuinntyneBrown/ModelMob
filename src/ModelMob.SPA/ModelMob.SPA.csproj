@@ -29,6 +29,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="codeGeneratorSettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\src\app\app-routing.module.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ModelMob.BookingService\ModelMob.BookingService.csproj" />
     <ProjectReference Include="..\ModelMob.ChatService\ModelMob.ChatService.csproj" />
     <ProjectReference Include="..\ModelMob.ClientService\ModelMob.ClientService.csproj" />
@@ -38,6 +46,23 @@
     <ProjectReference Include="..\ModelMob.JobService\ModelMob.JobService.csproj" />
     <ProjectReference Include="..\ModelMob.ModelService\ModelMob.ModelService.csproj" />
     <ProjectReference Include="..\ModelMob.OrganizationService\ModelMob.OrganizationService.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\src\app\login\" />
+    <Folder Include="ClientApp\src\app\home\" />
+    <Folder Include="ClientApp\src\app\material\" />
+    <Folder Include="ClientApp\src\app\landing\" />
+    <Folder Include="ClientApp\src\app\shared\models\" />
+    <Folder Include="ClientApp\src\app\shared\services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="codeGeneratorSettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\app-routing.module.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
