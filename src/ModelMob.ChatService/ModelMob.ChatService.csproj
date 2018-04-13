@@ -12,4 +12,9 @@
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0-preview2-final" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ModelMob.Core\ModelMob.Core.csproj" />
+    <ProjectReference Include="..\ModelMob.Infrastructure\ModelMob.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
