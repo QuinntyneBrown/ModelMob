@@ -20,6 +20,14 @@ namespace ModelMob.Infrastructure.Extensions
             return await response.Content.ReadAsAsync<T>();
         }
 
+        public static async Task<T> PutAsync<T>(this HttpClient httpClient, string requestUri, HttpContent httpContent)
+        {
+            var response = await httpClient.PutAsync(requestUri, httpContent);
+
+            return await response.Content.ReadAsAsync<T>();
+        }
+
+
         public static async Task<T> DeleteAsync<T>(this HttpClient httpClient, string requestUri)
         {
             var response = await httpClient.DeleteAsync(requestUri);

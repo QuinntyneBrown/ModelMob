@@ -13,8 +13,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="7.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0-preview2-final" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.1.0-preview2-final" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.0.0-preview2-final" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="2.1.0" />
+    <PackageReference Include="MediatR" Version="4.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="4.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,8 +29,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ModelMob.BookingService\ModelMob.BookingService.csproj" />
+    <ProjectReference Include="..\ModelMob.ChatService\ModelMob.ChatService.csproj" />
+    <ProjectReference Include="..\ModelMob.ClientService\ModelMob.ClientService.csproj" />
+    <ProjectReference Include="..\ModelMob.DigitalAssetService\ModelMob.DigitalAssetService.csproj" />
+    <ProjectReference Include="..\ModelMob.IdentityService\ModelMob.IdentityService.csproj" />
     <ProjectReference Include="..\ModelMob.Infrastructure\ModelMob.Infrastructure.csproj" />
+    <ProjectReference Include="..\ModelMob.JobService\ModelMob.JobService.csproj" />
     <ProjectReference Include="..\ModelMob.ModelService\ModelMob.ModelService.csproj" />
+    <ProjectReference Include="..\ModelMob.OrganizationService\ModelMob.OrganizationService.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
