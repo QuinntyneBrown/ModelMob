@@ -13,12 +13,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0-preview1-final" />
-    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.1.0-preview1-final" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.1.0-preview1-final" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0-preview2-final" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.1.0-preview2-final" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,22 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="codeGeneratorSettings.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ClientApp\src\app\models\" />
-    <Folder Include="ClientApp\src\app\shared\models\" />
-    <Folder Include="ClientApp\src\app\shared\services\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="codeGeneratorSettings.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\ModelMob.Infrastructure\ModelMob.Infrastructure.csproj" />
-    <ProjectReference Include="..\ModelMob.ModelService\ModelMob.ModelService.csproj" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
