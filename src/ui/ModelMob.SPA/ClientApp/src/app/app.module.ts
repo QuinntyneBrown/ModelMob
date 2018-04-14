@@ -6,11 +6,11 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
-import { LandingModule } from './landing/landing.module';
 import { LoginModule } from './login/login.module';
 import { MaterialModule } from './material/material.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
+import { SplashModule } from './splash/splash.module';
 
 @NgModule({
   declarations: [
@@ -24,11 +24,10 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
 
     HomeModule,
-    LandingModule,
     LoginModule,
     MaterialModule,
     SharedModule,
-
+    SplashModule
   ],
   providers: [],
   bootstrap: [AppComponent]
