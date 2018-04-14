@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
-using ModelMob.Infrastructure.Data;
-using ModelMob.Core.Entities;
-using ModelMob.Infrastructure.Services;
+using Infrastructure.Data;
+using Core.Entities;
+using Infrastructure.Services;
 using MediatR;
 using System.Threading.Tasks;
 using System.Threading;
@@ -39,9 +39,9 @@ namespace IdentityService
 
         public class Handler : IRequestHandler<Request, Response>
         {
-            public IModelMobDbContext _context { get; set; }
+            public IAppDbContext _context { get; set; }
             public IEncryptionService _encryptionService { get; set; }
-            public Handler(IModelMobDbContext context, IEncryptionService encryptionService)
+            public Handler(IAppDbContext context, IEncryptionService encryptionService)
             {
                 _context = context;
                 _encryptionService = encryptionService;

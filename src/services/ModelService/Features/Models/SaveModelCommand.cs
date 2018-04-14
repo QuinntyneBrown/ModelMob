@@ -2,8 +2,8 @@ using MediatR;
 using System.Threading.Tasks;
 using System.Threading;
 using FluentValidation;
-using ModelMob.Infrastructure.Data;
-using ModelMob.Core.Entities;
+using Infrastructure.Data;
+using Core.Entities;
 
 namespace ModelService.Features.Models
 {
@@ -27,8 +27,8 @@ namespace ModelService.Features.Models
 
         public class Handler : IRequestHandler<Request, Response>
         {
-            public IModelMobDbContext _context { get; set; }
-            public Handler(IModelMobDbContext context)
+            public IAppDbContext _context { get; set; }
+            public Handler(IAppDbContext context)
             {
                 _context = context;
             }

@@ -1,7 +1,7 @@
 using MediatR;
 using System.Threading.Tasks;
 using System.Threading;
-using ModelMob.Infrastructure.Data;
+using Infrastructure.Data;
 using FluentValidation;
 
 namespace ChatService.Features.Messages
@@ -27,8 +27,8 @@ namespace ChatService.Features.Messages
 
         public class Handler : IRequestHandler<Request, Response>
         {
-            public IModelMobDbContext _context { get; set; }
-            public Handler(IModelMobDbContext context)
+            public IAppDbContext _context { get; set; }
+            public Handler(IAppDbContext context)
             {
                 _context = context;
             }

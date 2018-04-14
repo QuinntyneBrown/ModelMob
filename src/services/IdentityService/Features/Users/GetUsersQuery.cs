@@ -2,7 +2,7 @@ using MediatR;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Collections.Generic;
-using ModelMob.Infrastructure.Data;
+using Infrastructure.Data;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,8 +19,8 @@ namespace IdentityService
 
         public class Handler : IRequestHandler<Request, Response>
         {
-            private readonly IModelMobDbContext _context;
-            public Handler(IModelMobDbContext context)
+            private readonly IAppDbContext _context;
+            public Handler(IAppDbContext context)
             {
                 _context = context;
             }

@@ -1,9 +1,9 @@
-﻿using ModelMob.Infrastructure.OperationFilters;
-using ModelMob.Infrastructure.Caching;
-using ModelMob.Infrastructure.Configuration;
-using ModelMob.Infrastructure.Data;
-using ModelMob.Infrastructure.Identity;
-using ModelMob.Infrastructure.Services;
+﻿using Infrastructure.OperationFilters;
+using Infrastructure.Caching;
+using Infrastructure.Configuration;
+using Infrastructure.Data;
+using Infrastructure.Identity;
+using Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -64,11 +64,11 @@ namespace ModelMob.SPA.Extensions
                                                string connectionString)
         {
             //Note: this has to come first
-            services.AddScoped<IModelMobDbContext, ModelMobDbContext>();
+            services.AddScoped<IAppDbContext, AppDbContext>();
 
-            services.AddDbContext<ModelMobDbContext>(options =>
+            services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseSqlServer(connectionString, b => b.MigrationsAssembly("ModelMob.Infrastructure"));
+                options.UseSqlServer(connectionString, b => b.MigrationsAssembly("Infrastructure"));
             });
 
             return services;

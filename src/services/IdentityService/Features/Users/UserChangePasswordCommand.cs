@@ -1,8 +1,8 @@
 using MediatR;
 using System.Threading.Tasks;
 using System.Threading;
-using ModelMob.Infrastructure.Data;
-using ModelMob.Infrastructure.Services;
+using Infrastructure.Data;
+using Infrastructure.Services;
 
 namespace IdentityService
 {
@@ -17,9 +17,9 @@ namespace IdentityService
         public class Handler : IRequestHandler<Request>
         {
             private readonly IEncryptionService _encryptionService;
-            private readonly IModelMobDbContext _context;
+            private readonly IAppDbContext _context;
 
-            public Handler(IModelMobDbContext context, IEncryptionService encryptionService)
+            public Handler(IAppDbContext context, IEncryptionService encryptionService)
             {
                 _context = context;
                 _encryptionService = encryptionService;

@@ -4,7 +4,7 @@ using IdentityService;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
-using ModelMob.Infrastructure.Extensions;
+using Infrastructure.Extensions;
 
 namespace ModelMob.SPA.Controllers
 {

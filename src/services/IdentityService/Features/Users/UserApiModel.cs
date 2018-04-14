@@ -1,4 +1,4 @@
-using ModelMob.Core.Entities;
+using Core.Entities;
 using System;
 
 namespace IdentityService

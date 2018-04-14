@@ -1,4 +1,4 @@
-using ModelMob.Core.Entities;
+using Core.Entities;
 
 namespace ChatService.Features.Conversations
 {

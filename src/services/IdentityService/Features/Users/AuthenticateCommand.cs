@@ -1,11 +1,11 @@
-using ModelMob.Infrastructure.Data;
-using ModelMob.Infrastructure.Identity;
+using Infrastructure.Data;
+using Infrastructure.Identity;
 using MediatR;
 using System.Threading.Tasks;
 using System.Threading;
 using Microsoft.EntityFrameworkCore;
-using ModelMob.Core.Entities;
-using ModelMob.Infrastructure.Services;
+using Core.Entities;
+using Infrastructure.Services;
 
 namespace IdentityService
 {
@@ -25,11 +25,11 @@ namespace IdentityService
 
         public class Handler : IRequestHandler<Request, Response>
         {
-            private readonly IModelMobDbContext _context;
+            private readonly IAppDbContext _context;
             private readonly IEncryptionService _encryptionService;
             private readonly ITokenProvider _tokenProvider;
 
-            public Handler(IModelMobDbContext context, ITokenProvider tokenProvider, IEncryptionService encryptionService)
+            public Handler(IAppDbContext context, ITokenProvider tokenProvider, IEncryptionService encryptionService)
             {
                 _context = context;
                 _tokenProvider = tokenProvider;
