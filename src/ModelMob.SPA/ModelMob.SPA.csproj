@@ -37,18 +37,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ModelMob.BookingService\ModelMob.BookingService.csproj" />
-    <ProjectReference Include="..\ModelMob.ChatService\ModelMob.ChatService.csproj" />
-    <ProjectReference Include="..\ModelMob.ClientService\ModelMob.ClientService.csproj" />
-    <ProjectReference Include="..\ModelMob.DigitalAssetService\ModelMob.DigitalAssetService.csproj" />
-    <ProjectReference Include="..\ModelMob.IdentityService\ModelMob.IdentityService.csproj" />
-    <ProjectReference Include="..\ModelMob.Infrastructure\ModelMob.Infrastructure.csproj" />
-    <ProjectReference Include="..\ModelMob.JobService\ModelMob.JobService.csproj" />
-    <ProjectReference Include="..\ModelMob.ModelService\ModelMob.ModelService.csproj" />
-    <ProjectReference Include="..\ModelMob.OrganizationService\ModelMob.OrganizationService.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="ClientApp\src\app\login\" />
     <Folder Include="ClientApp\src\app\home\" />
     <Folder Include="ClientApp\src\app\material\" />
@@ -59,6 +47,19 @@
 
   <ItemGroup>
     <None Include="codeGeneratorSettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\common\ModelMob.Core\ModelMob.Core.csproj" />
+    <ProjectReference Include="..\common\ModelMob.Infrastructure\ModelMob.Infrastructure.csproj" />
+    <ProjectReference Include="..\services\BookingService\BookingService.csproj" />
+    <ProjectReference Include="..\services\ChatService\ChatService.csproj" />
+    <ProjectReference Include="..\services\ClientService\ClientService.csproj" />
+    <ProjectReference Include="..\services\DigitalAssetService\DigitalAssetService.csproj" />
+    <ProjectReference Include="..\services\IdentityService\IdentityService.csproj" />
+    <ProjectReference Include="..\services\JobService\JobService.csproj" />
+    <ProjectReference Include="..\services\ModelService\ModelService.csproj" />
+    <ProjectReference Include="..\services\OrganizationService\OrganizationService.csproj" />
   </ItemGroup>
 
   <ItemGroup>

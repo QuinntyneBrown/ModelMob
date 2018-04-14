@@ -1,4 +1,4 @@
-﻿using ModelMob.ModelService.Features.Models;
+﻿using ModelService.Features.Models;
 using ModelMob.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;

@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using ModelMob.ChatService.Features.Conversations;
+using ChatService.Features.Conversations;
 
 namespace ModelMob.SPA.Controllers
 {
